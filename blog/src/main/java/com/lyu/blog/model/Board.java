@@ -31,7 +31,7 @@ public class Board {
 	private int count;
 	
 	@ManyToOne //Many= Board, User = One 한명의 유저는 여러개의 게시글을 쓸 수 있다.
-	@JoinColumn(name="userId")
+	@JoinColumn(name="userId") //user id를 참조
 	private User user;//DB는 오브젝트를 저장할 수 없다. FK, 자바는 오브젝트를 저장할 수 있다.
 	
 	@CreationTimestamp
