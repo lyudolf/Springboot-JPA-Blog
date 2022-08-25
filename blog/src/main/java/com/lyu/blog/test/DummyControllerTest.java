@@ -95,7 +95,7 @@ public class DummyControllerTest {
 			@Override
 			public IllegalArgumentException get() {
 				// TODO Auto-generated method stub
-				return new IllegalArgumentException("해당 유저는 없습니다. id: " + id);
+				return new IllegalArgumentException("해당 유저를 찾을수 없습니다. id: " + id);
 			}//없으면 유저가 없다고 알려주는 페이지를 보여준다
 		
 		/* 람다식
