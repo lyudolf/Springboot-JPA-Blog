@@ -19,8 +19,8 @@
 
 <%@ include file="../layout/header.jsp"%>
 
-<body>
-	<form action="/action_page.php" style="margin-left:100px; margin-right:100px;">
+<div style="margin-left:100px; margin-right:100px;">
+	<form action="/blob/api/user/login">
 		
 		<div class="form-group">
 			<label for="username">Username:</label> <input type="text"
@@ -37,11 +37,12 @@
 				class="form-check-input" type="checkbox"> Remember me
 			</label>
 		</div>
-		<button type="submit" class="btn btn-primary">로그인하기</button>
 	</form>
-	<br>
-</body>
-
+	<button id="btn-login" class="btn btn-primary">로그인하기</button>
+	
+</div>
+<br>
+<script src="/js/user.js"> </script>
 
 <%@ include file="../layout/footer.jsp"%>
 

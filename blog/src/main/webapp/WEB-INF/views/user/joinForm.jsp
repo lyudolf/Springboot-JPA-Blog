@@ -46,7 +46,7 @@
 	<button type="submit" style="margin-left:100px;" id="btn-save" class="btn btn-primary">회원가입</button>
 	<br>
 </div>
-<script src="/blog/js/user.js"> </script>
+<script src="/js/user.js"> </script>
 
 <%@ include file="../layout/footer.jsp"%>
 
