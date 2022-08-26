@@ -20,7 +20,7 @@ public class BoardController {
 		model.addAttribute("boards", boardService.글목록());
 		return "index"; //viewResolver 작동!!
 	}
-
+//git
 	//USER 권한이 필요
 	@GetMapping("/board/saveForm")
 	public String saveForm() {
