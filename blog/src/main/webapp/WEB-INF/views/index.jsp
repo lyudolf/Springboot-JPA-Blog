@@ -47,12 +47,15 @@
 	      <hr class="d-sm-none">
 	    </div>
 	    <div class="col-sm-8">
-	      <h2>TITLE HEADING</h2>
-	      <h5>Title description, Dec 7, 2017</h5>
-	      <div class="fakeimg">Fake Image</div>
-	      <p>Some text..</p>
-	      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-	      <br>
+	     <C:forEach var="board" items="${boards}">
+		      <div class="card m-2">
+			      <div class="card-body">
+			      	<h4 class="card-title"> 제목 적는 부분</h4>
+			      	<a href="#" class="btn btn-primary">상세보기</a>
+			      </div>
+		      </div>
+	     </C:forEach>
+	      
 	      <h2>TITLE HEADING</h2>
 	      <h5>Title description, Sep 2, 2017</h5>
 	      <div class="fakeimg">Fake Image</div>
