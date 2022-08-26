@@ -65,6 +65,8 @@ public class DummyControllerTest {
 
 	}
 	
+	//<--user 목록 페이징-->
+	
 	//http://localhost:8000/blog/dummy/user
 	@GetMapping("/dummy/users")
 	public List<User> list(){
@@ -73,14 +75,14 @@ public class DummyControllerTest {
 	
 	//한 페이지당 2건의 데이터를 리턴받아보기
 	@GetMapping("/dummy/user")
-	public List<User> pageList(@PageableDefault(size=2, sort="id", direction = Sort.Direction.DESC) Pageable pageable){
+	public Page<User> pageList(@PageableDefault(size=2, sort="id", direction = Sort.Direction.DESC) Pageable pageable){
 		Page<User> pagingUser = userRepository.findAll(pageable);
 		/*if(pagingUser.isFirst()) {
 			
 		}
 		*/
 		List<User> users= pagingUser.getContent();
-		return users;
+		return pagingUser;
 	}
 	
 	//{id} 주소로 파라미터 전달 받을 수 있음

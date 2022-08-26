@@ -38,7 +38,7 @@ public class SecurityConfig{
 		http
 		.csrf().disable()//csrf 토큰 비활성화(테스트 시 걸어두는게 좋음)
 		.authorizeRequests()
-			.antMatchers("/","/auth/**","/js/**", "/css/**","/image/**")//auth로 들어오는건 누구나 가능
+			.antMatchers("/","/auth/**","/js/**", "/css/**","/image/**","/dummy/**")//auth로 들어오는건 누구나 가능
 			.permitAll()
 			.anyRequest() //1. antmatchers에서 permit 인증 되지 않은 요청은
 			.authenticated()
