@@ -23,7 +23,7 @@
 <body>
 
 	<div class="jumbotron text-center" style="margin-bottom: 0">
-		<h1>My First Bootstrap 4 Page</h1>
+		<h1>Lyu's Blog</h1>
 		<p>Resize this responsive page to see the effect!</p>
 	</div>
 
@@ -53,7 +53,7 @@
 					<div class="card m-2">
 						<div class="card-body">
 							<h4 class="card-title">${board.title}</h4>
-							<a href="#" class="btn btn-primary">상세보기</a>
+							<a href="/board/${board.id}" class="btn btn-primary">상세보기</a>
 						</div>
 					</div>
 				</c:forEach>
