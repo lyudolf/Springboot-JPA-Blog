@@ -26,7 +26,7 @@ public class SecurityConfig{
 	}
 	
 	//시큐리티가 대신 로그인해줄때 password가로채기를 하는데
-	//해당 password가 뭘로 해쉬가 되어 회원가입이 되는지 알아야
+	//해당 password가 뭘로 해쉬가 되어 회원 가입이 되는지 알아야
 	//같은 해쉬로 암호화 해서 DB에 있는 해쉬랑 비교 가능
 	
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
