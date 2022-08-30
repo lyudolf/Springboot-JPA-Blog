@@ -3,10 +3,13 @@ package com.lyu.blog.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -16,10 +19,16 @@ import com.lyu.blog.config.auth.PrincipalDetailService;
 @Configuration //빈 등록(IoC관리)
 @EnableWebSecurity //security필터등록
 @EnableGlobalMethodSecurity(prePostEnabled =true) //특정주소를 접근하면 권한 및 인증 미리 체크
-public class SecurityConfig{
+public class SecurityConfig {
 
 	@Autowired
 	private PrincipalDetailService principalDetailService;
+
+	@Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
+    }
+
 	@Bean// IoC가 됨
 	public BCryptPasswordEncoder encodePWD() {
 		return new BCryptPasswordEncoder();

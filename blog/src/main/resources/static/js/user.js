@@ -42,6 +42,7 @@ let index = {
 	update:function(){
 		let data = {
 			id: $("#id").val(),
+			username:$("#username").val(),
 			password: $("#password").val(),
 			email: $("#email").val()
 		};
@@ -52,9 +53,9 @@ let index = {
 			contentType: "application/json; charset=utf-8",
 			dataType:"json"
 		}).done(function(resp){
-			alert("회원수정이 완료되었습니다.다시 로그인해주세요");
+			alert("회원수정이 완료되었습니다.");
 			//console.log(resp);
-			location.href="/logout";
+			location.href="/";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
