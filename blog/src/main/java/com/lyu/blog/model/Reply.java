@@ -1,6 +1,7 @@
 package com.lyu.blog.model;
 
-import java.sql.Timestamp;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +13,14 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 public class Reply {
 	@Id//Primary key
@@ -30,5 +39,5 @@ public class Reply {
 	private User user;
 	
 	@CreationTimestamp
-	private Timestamp creatDate;
+	private LocalDateTime createDate;
 }
