@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import com.lyu.blog.config.auth.PrincipalDetailService;
-
+//블로그프로젝트 완성
 //빈 등록: 스프링 컨테이너에서 객체를 관리할 수 있게 하는 것
 @Configuration //빈 등록(IoC관리)
 @EnableWebSecurity //security필터등록
