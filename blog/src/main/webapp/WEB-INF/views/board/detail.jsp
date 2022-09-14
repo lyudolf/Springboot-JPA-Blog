@@ -27,6 +27,7 @@
 
 	<div class="card">
 		<form>
+		<input type="hidden" id="userId" value="${principal.user.id}"/>
 		<input type="hidden" id="boardId"value="${board.id }"/>
 			<div class="card-header">댓글 작성하기</div>
 			<div class="card-body">
